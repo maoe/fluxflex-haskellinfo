@@ -1,0 +1,7 @@
+h1, h2 {
+  font-family: 'Corben', serif;
+}
+
+body {
+  font-family: serif;
+}

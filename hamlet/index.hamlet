@@ -1,0 +1,8 @@
+<h1>Haskell Info
+<h2>Compiler info
+<p>
+  #{show compilerName} - #{showVersion (compilerVersion)}
+<h2>Installed packages
+<ul>
+$forall package <- packages
+  <li>#{packageName package} - #{showVersion (pkgVersion package)}
