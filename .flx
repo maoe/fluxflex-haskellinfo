@@ -1,9 +1,9 @@
 [deploy]
-cabal update
-cabal clean
-cabal configure --disable-split-objs --enable-executable-stripping
-cabal install --only-dependencies
-cabal build
+/usr/local/cabal/bin/cabal update
+/usr/local/cabal/bin/cabal clean
+/usr/local/cabal/bin/cabal configure --disable-split-objs --enable-executable-stripping
+/usr/local/cabal/bin/cabal install --only-dependencies
+/usr/local/cabal/bin/cabal build
 cp dist/build/fluxflex-haskellinfo.fcgi/fluxflex-haskellinfo.fcgi public_html/
 chmod 705 public_html/fluxflex-haskellinfo.fcgi
 
