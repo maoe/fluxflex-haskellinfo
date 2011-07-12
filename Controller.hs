@@ -3,9 +3,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 module Controller
-    ( withHaskellInfo
-    , withDevelApp
-    ) where
+  ( withHaskellInfo
+  , withDevelApp
+  ) where
 
 import HaskellInfo
 import Settings
@@ -36,8 +36,8 @@ getRobotsR = return $ RepPlain $ toContent ("User-agent: *" :: ByteString)
 -- migrations handled by Yesod.
 withHaskellInfo :: (Application -> IO a) -> IO a
 withHaskellInfo f = do
-    let h = HaskellInfo s
-    toWaiApp h >>= f
+  let h = HaskellInfo s
+  toWaiApp h >>= f
   where
     s = static Settings.staticdir
 

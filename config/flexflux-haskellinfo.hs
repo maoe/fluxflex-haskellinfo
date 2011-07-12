@@ -13,7 +13,7 @@ import Network.Wai.Handler.Warp (run)
 
 main :: IO ()
 main = do
-    let port = 3000
-    hPutStrLn stderr $ "Application launched, listening on port " ++ show port
-    withHaskellInfo $ run port . debug
+  let port = 3000
+  hPutStrLn stderr $ "Application launched, listening on port " ++ show port
+  withHaskellInfo $ run port . debug
 #endif
