@@ -1,5 +1,5 @@
 [deploy]
-cp -r static public_html/
+mkdir static
 /usr/local/cabal/bin/cabal update
 /usr/local/cabal/bin/cabal clean
 /usr/local/cabal/bin/cabal install --disable-split-objs --enable-executable-stripping
