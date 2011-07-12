@@ -10,7 +10,7 @@ category:          Web
 stability:         Experimental
 cabal-version:     >= 1.6
 build-type:        Simple
-homepage:          http://fluxflex-haskellinfo.yesodweb.com/
+homepage:          http://haskell-info.fluxflex.com/
 
 Flag production
     Description:   Build the production executable.

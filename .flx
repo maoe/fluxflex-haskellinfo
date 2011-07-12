@@ -7,7 +7,7 @@ ls -lha
 ls -lha
 /usr/local/cabal/bin/cabal configure --disable-split-objs --enable-executable-stripping
 ls -lha
-/usr/local/cabal/bin/cabal install --only-dependencies
+/usr/local/cabal/bin/cabal install
 ls -lha
 /usr/local/cabal/bin/cabal build -v
 ls -lha
