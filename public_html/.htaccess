@@ -1,0 +1,7 @@
+SetHandler fcgid-script
+Options +ExecCGI
+
+RewriteEngine On
+
+RewriteRule ^(.*)$ fluxflex-haskellinfo.fcgi [QSA,L]
+RewriteBase /

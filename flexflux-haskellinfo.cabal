@@ -14,7 +14,7 @@ homepage:          http://flexflux-haskellinfo.yesodweb.com/
 
 Flag production
     Description:   Build the production executable.
-    Default:       False
+    Default:       True
 
 Flag devel
     Description:   Build for use with "yesod devel"
@@ -32,7 +32,7 @@ library
                      StaticFiles
                      Handler.Index
 
-executable         flexflux-haskellinfo
+executable         flexflux-haskellinfo.fcgi
     if flag(devel)
         Buildable: False
 
@@ -49,6 +49,7 @@ executable         flexflux-haskellinfo
                  , yesod-core   >= 0.8     && < 0.9
                  , yesod-static
                  , wai-extra
+                 , wai-handler-fastcgi
                  , directory
                  , bytestring
                  , text

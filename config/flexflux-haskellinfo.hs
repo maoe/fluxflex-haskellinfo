@@ -1,10 +1,10 @@
 {-# LANGUAGE CPP #-}
 #if PRODUCTION
 import Controller (withHaskellInfo)
-import Network.Wai.Handler.Warp (run)
+import Network.Wai.Handler.FastCGI (run)
 
 main :: IO ()
-main = withHaskellInfo $ run 3000
+main = withHaskellInfo run
 #else
 import Controller (withHaskellInfo)
 import System.IO (hPutStrLn, stderr)
