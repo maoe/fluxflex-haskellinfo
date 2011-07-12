@@ -2,10 +2,18 @@
 pwd
 ls -lha
 /usr/local/cabal/bin/cabal update
+ls -lha
 /usr/local/cabal/bin/cabal clean
+ls -lha
 /usr/local/cabal/bin/cabal configure --disable-split-objs --enable-executable-stripping
+ls -lha
 /usr/local/cabal/bin/cabal install --only-dependencies
+ls -lha
 /usr/local/cabal/bin/cabal build
+ls -lha
+ls -lha dist
 cp dist/build/fluxflex-haskellinfo.fcgi/fluxflex-haskellinfo.fcgi public_html/
+ls -lha
 chmod 705 public_html/fluxflex-haskellinfo.fcgi
+ls -lha
 
