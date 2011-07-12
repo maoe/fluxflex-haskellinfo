@@ -1,4 +1,4 @@
-name:              flexflux-haskellinfo
+name:              fluxflex-haskellinfo
 version:           0.0.2
 license:           BSD3
 license-file:      LICENSE
@@ -10,7 +10,7 @@ category:          Web
 stability:         Experimental
 cabal-version:     >= 1.6
 build-type:        Simple
-homepage:          http://flexflux-haskellinfo.yesodweb.com/
+homepage:          http://fluxflex-haskellinfo.yesodweb.com/
 
 Flag production
     Description:   Build the production executable.
@@ -32,7 +32,7 @@ library
                      StaticFiles
                      Handler.Index
 
-executable         flexflux-haskellinfo.fcgi
+executable         fluxflex-haskellinfo.fcgi
     if flag(devel)
         Buildable: False
 
@@ -42,7 +42,7 @@ executable         flexflux-haskellinfo.fcgi
     else
         ghc-options:   -Wall -threaded
 
-    main-is:       config/flexflux-haskellinfo.hs
+    main-is:       config/fluxflex-haskellinfo.hs
     hs-source-dirs: ., config
 
     build-depends: base         >= 4       && < 5

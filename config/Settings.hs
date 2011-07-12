@@ -5,7 +5,7 @@
 -- includes database connection settings, static file locations, etc.
 -- In addition, you can configure a number of different aspects of Yesod
 -- by overriding methods in the Yesod typeclass. That instance is
--- declared in the flexflux-haskellinfo.hs file.
+-- declared in the fluxflex-haskellinfo.hs file.
 module Settings
   ( hamletFile
   , juliusFile
@@ -53,10 +53,10 @@ staticdir = "static"
 -- please see:
 --   http://code.google.com/speed/page-speed/docs/request.html#ServeFromCookielessDomain
 --
--- If you change the resource pattern for StaticR in flexflux-haskellinfo.hs, you will
+-- If you change the resource pattern for StaticR in fluxflex-haskellinfo.hs, you will
 -- have to make a corresponding change here.
 --
--- To see how this value is used, see urlRenderOverride in flexflux-haskellinfo.hs
+-- To see how this value is used, see urlRenderOverride in fluxflex-haskellinfo.hs
 staticroot :: Text
 staticroot = approot `mappend` "/static"
 
