@@ -7,14 +7,14 @@
 -- by overriding methods in the Yesod typeclass. That instance is
 -- declared in the flexflux-haskellinfo.hs file.
 module Settings
-    ( hamletFile
-    , juliusFile
-    , luciusFile
-    , widgetFile
-    , approot
-    , staticroot
-    , staticdir
-    ) where
+  ( hamletFile
+  , juliusFile
+  , luciusFile
+  , widgetFile
+  , approot
+  , staticroot
+  , staticdir
+  ) where
 
 import qualified Text.Hamlet as H
 import qualified Text.Julius as H
@@ -34,7 +34,7 @@ approot :: Text
 -- you would probably want it to be:
 -- > approot = "http://www.yesod.com"
 -- Please note that there is no trailing slash.
-approot = "http://localhost:3000"
+approot = "http://haskell-info.fluxflex.com"
 #else
 approot = "http://localhost:3000"
 #endif
@@ -100,11 +100,11 @@ juliusFile = H.juliusFileDebug . toJuliusFile
 
 widgetFile :: FilePath -> Q Exp
 widgetFile x = do
-    let h = unlessExists toHamletFile hamletFile
-    let j = unlessExists toJuliusFile juliusFile
-    let l = unlessExists toLuciusFile luciusFile
-    [|addWidget $h >> addJulius $j >> addLucius $l|]
+  let h = unlessExists toHamletFile hamletFile
+  let j = unlessExists toJuliusFile juliusFile
+  let l = unlessExists toLuciusFile luciusFile
+  [|addWidget $h >> addJulius $j >> addLucius $l|]
   where
     unlessExists tofn f = do
-        e <- qRunIO $ doesFileExist $ tofn x
-        if e then f x else [|mempty|]
+      e <- qRunIO $ doesFileExist $ tofn x
+      if e then f x else [|mempty|]
