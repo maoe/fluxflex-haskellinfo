@@ -1,7 +1,9 @@
 [deploy]
+cabal update
 cabal clean
 cabal configure --disable-split-objs --enable-executable-stripping
 cabal install --only-dependencies
 cabal build
 cp dist/build/flexflux-haskellinfo.fcgi/flexflux-haskellinfo.fcgi public_html/
+chmod 705 public_html/flexflux-haskellinfo.fcgi
 
