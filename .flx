@@ -2,6 +2,7 @@
 public_html 755
 
 [setup]
+rm -rf static .cabal
 mkdir static
 
 [deploy]
