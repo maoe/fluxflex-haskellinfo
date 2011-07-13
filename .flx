@@ -9,5 +9,6 @@ mkdir static
 /usr/local/cabal/bin/cabal update
 /usr/local/cabal/bin/cabal clean
 /usr/local/cabal/bin/cabal install --one-shot
+echo "INFO: cabal install status: $?"
 /bin/cp .cabal/bin/fluxflex-haskellinfo public_html/fluxflex-haskellinfo.fcgi
 /bin/chmod 705 public_html/fluxflex-haskellinfo.fcgi
