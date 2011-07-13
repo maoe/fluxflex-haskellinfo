@@ -10,5 +10,7 @@ mkdir static
 /usr/local/cabal/bin/cabal clean
 /usr/local/cabal/bin/cabal install --disable-split-objs --enable-executable-stripping
 /bin/cp .cabal/bin/fluxflex-haskellinfo public_html/fluxflex-haskellinfo.fcgi
+ls -lha .cabal/bin/
+ls -lha public_html/
 /bin/chmod 705 public_html/fluxflex-haskellinfo.fcgi
 
