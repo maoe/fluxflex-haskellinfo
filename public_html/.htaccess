@@ -1,4 +1,4 @@
-SetHandler fcgid-script
+AddHandler fcgid-script .fcgi
 Options +ExecCGI
 
 RewriteEngine On
