@@ -11,3 +11,4 @@ mkdir static
 /usr/local/cabal/bin/cabal install --one-shot
 /bin/cp -v .cabal/bin/fluxflex-haskellinfo public_html/dispatch.fcgi
 /bin/chmod -v 705 public_html/dispatch.fcgi
+ls -lha public_html
