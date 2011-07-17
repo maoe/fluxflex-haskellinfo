@@ -1,7 +1,7 @@
-AddHandler fcgid-script .fcgi
-Options +ExecCGI
-
+Options +FollowSymLinks +ExecCGI
 RewriteEngine On
-
-RewriteRule ^(.*)$ fluxflex-haskellinfo.fcgi [QSA,L]
 RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ dispatch.fcgi/$1 [QSA,L]
+DirectoryIndex dispatch.fcgi index.html index.htm

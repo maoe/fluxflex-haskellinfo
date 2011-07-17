@@ -9,5 +9,5 @@ mkdir static
 /usr/local/cabal/bin/cabal update
 /usr/local/cabal/bin/cabal clean
 /usr/local/cabal/bin/cabal install --one-shot
-/bin/cp -v .cabal/bin/fluxflex-haskellinfo public_html/fluxflex-haskellinfo.fcgi
-/bin/chmod -v 705 public_html/fluxflex-haskellinfo.fcgi
+/bin/cp -v .cabal/bin/fluxflex-haskellinfo public_html/dispatch.fcgi
+/bin/chmod -v 705 public_html/dispatch.fcgi
